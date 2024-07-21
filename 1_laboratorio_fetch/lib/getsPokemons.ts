@@ -1,3 +1,5 @@
+// lib/getsPokemons.ts
+
 export async function getPokemons() {
     const headers = new Headers({ 
       "Content-Type": "application/json"
@@ -27,4 +29,4 @@ export async function getPokemons() {
       console.error('Failed to fetch pokemons:', error);
       return [];
     }
-  }
+}

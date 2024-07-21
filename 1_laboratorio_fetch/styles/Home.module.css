@@ -1,3 +1,5 @@
+/* styles/Home.module.css */
+
 .container {
     padding: 0 2rem;
   }
@@ -5,42 +7,61 @@
   .main {
     min-height: 100vh;
     padding: 4rem 0;
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    background-color: #f0f4f8; /* Fondo claro para destacar el contenido */
+  }
+  
+  .heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333; /* Color oscuro para el encabezado */
   }
   
   .grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cuadrícula adaptable */
+    gap: 1.5rem; /* Espacio entre tarjetas */
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem; /* Espacio interno */
   }
   
   .card {
-    margin: 1rem;
-    flex-basis: 45%;
-    padding: 1.5rem;
-    text-align: left;
-    color: inherit;
-    text-decoration: none;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    background: white;
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 12px;
+    overflow: hidden; /* Redondear las esquinas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición suave */
+    text-align: center; /* Centramos el texto */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .card:hover,
-  .card:focus,
-  .card:active {
-    color: #0070f3;
-    border-color: #0070f3;
+  .card:hover {
+    transform: translateY(-5px); /* Elevar la tarjeta al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumentar la sombra */
   }
   
   .card img {
+    border-radius: 12px;
     max-width: 100%;
-    border-radius: 10px;
+    height: auto;
   }
+  
+  .card h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #333; /* Color oscuro para el texto */
+  }
+  
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
